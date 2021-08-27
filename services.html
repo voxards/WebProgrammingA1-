@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Website Layout</title>
+
+<!-- Referencing external CSS file-->
+  <link rel="stylesheet" href="main.css">
+
+
+</head>
+
+<body>
+<!-- Header code, this also includes the navigation bar and LIFE logo -->
+<header>
+  <div class="container">
+    <h1>LIFE</h1>
+  <!-- Navigation bar -->
+    <nav>
+      <ul>
+          <!-- Bullet list to sort links
+          A href is here to link to multiple sections of the site. -->
+        <li><a href='index.html'>Home</a></li>
+        <li><a href='#'>Services</a></li>
+        <li><a href='contact.html'>Contact</a></li>
+      </ul>
+    </nav>
+    <!-- Div class for register hyperlink, Sign in link currently not not working, only intended for design -->
+    <div class=register>
+    Sign In | <a href='register.html'>Register</a>
+  </div>
+
+</header>
+
+
+
+<!-- All following code is related to each content box of services, including a heading, text, image and videos using mp4 format.-->
+<h2 class='yogaheading'>YOGA</h2>
+<h2 class='meditationheading'>MEDITATION</h2>
+
+<!-- Div class for the texts -->
+<div class="yoga">
+<br> Practing Yoga is a spiritual practice, and for many, a way of life. Yoga can help shape and unravel your inner self, providing the body a foundation to build good habits, and a peaceful mind.
+Yoga helps with;
+<img src='images/yoga.jpg' class='yogajpg'>
+<!-- Bullet list to sort information -->
+<li>Flexibility</li>
+<li>Strength</li>
+<li>Mobility</li>
+<li>Balance</li>
+<li>Stress</li>
+<li>Relaxation</li>
+<br>The video below, from trusted and experienced yoga practitioner, Adriene outlines all the benefits to start practicing yoga to your full potential.
+
+<!-- HTMl5 video tag, with 400 width specification and mp4 format. -->
+<video width="400" controls>
+
+    <source src="videos/yoga.mp4"  type="video/mp4" />
+
+      Sorry, your browser doesn't support embedded videos.
+</video>
+</div>
+
+
+<div class='meditation'>
+  Meditation is a form of relaxation to reduce stress, and become more focused to train the mind and transform your perspective on life. In order to begin meditation, you must sit with an untamed nature, to calm your mind and involves some fairly practical techniques.
+<img src="images/meditation.jpg" class="meditationjpg">
+<br><br>The video below, instructs beginners the secrets of meditation and everything you need to get a relaxed, peaceful mind.
+<video width="400" controls>
+
+    <source src="videos/meditation.mp4" type="video/mp4" />
+
+      Sorry, your browser doesn't suppo+rt embedded videos.
+</video>
+</div>
+
+<h2 class='stretchingheading'>
+STRETCHING
+</h2>
+<div class='stretching'>
+  Stretching keeps your muscles strong, healthy and flexible. Without stretching, joints may become tight and even shorten. When stretching, the flexbility is required to maintain a range of motion throughout the joints and prevent cramps, joint pain, strains and muscle damage
+<img src="images/stretching.jpg" class="stretchingjpg">
+<br><br>The video below demonstrates a quick 5-min stretch to help relieve the body of pain, and loosen tight muscles to enjoy a comfortable, long day.
+<video width="400" controls>
+
+    <source src="videos/stretching.mp4"  type="video/mp4" />
+
+      Sorry, your browser doesn't support embedded videos.
+</video>
+</div>
+
+<h2 class='healthyheading'>
+HEALTHY HABITS
+</h2>
+
+<div class='healthy'>
+  Healthy Habits are an important aspect of our lives, they are known to be one of the major sources of relaxation and a happier mind. A healthy habit does not just include diet, but also proper amounts of sleep, being proactive, and using your day wisely.
+<img src="images/healthy.jpg" class="healthyjpg">
+<br><br>The video below, gives 20 habits that people around the world have had success with to enjoy a happier, self-motivated life, and maybe you will too.
+<video width="400" controls>
+
+    <source src="videos/habits.mp4"  type="video/mp4" />
+
+      Sorry, your browser doesn't support embedded videos.
+</video></div>
+
+<!-- Footer, COVID-19 Resources hyperlink is referenced here -->
+<footer class="sfooter">
+<a href="https://www.health.gov.au/resources/collections/novel-coronavirus-2019-ncov-resources">COVID-19 Resources</a>
+</footer>
+
+</body>
+</html>

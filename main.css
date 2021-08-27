@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 800;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  background: #ff80b3;
+  margin-top:0 auto;
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+nav {
+  float:left;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+}
+h1 {
+  float: left;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style:none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 150px;
+  padding-top: 30px;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+/* Home Page CSS */
+.textcontainer {
+  margin: 100px auto;
+  width: 50%;
+  padding: 8px;
+}
+
+.text1 {
+  margin-right: 50%;
+  text-align: justify;
+}
+
+  .text2 {
+    margin-left: 50%;
+    text-align: justify;
+    padding-top: 15%;
+  }
+
+    .text3{
+      margin-right: 50%;
+      text-align: justify;
+      padding-top: 15%;
+    }
+.smiling {
+  float: right;
+  width: 300px;
+  height: 200px;
+}
+
+/* Services Page CSS */
+.stretching2 {
+  float: left;
+  width: 300px;
+  height: 200px;
+  padding-top: 10%;
+}
+
+.stress {
+  float: right;
+  width: 300px;
+  height: 200px;
+  padding-top: 13%;
+}
+
+.yogaheading {
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  clear: both;
+  padding-left: 25%;
+  display: inline-block;
+}
+
+.yoga {
+  text-align: center;
+  float: left;
+  margin: 0 auto;
+  position: absolute;
+  padding-right: 50%;
+  font-size: 15px;
+}
+
+  .yogajpg {
+    float: right;
+    width: 40%;
+  }
+
+.meditationheading {
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    float: right;
+    clear: both;
+    padding-right: 20%;
+    display: inline-block;
+  }
+
+  .meditation {
+    text-align: center;
+    float: right;
+    margin: 0 auto;
+    clear: both;
+    position: absolute;
+    padding: 2% 2% 0 25%;
+    font-size: 15px;
+    display: inline-block;
+  }
+
+    .meditationjpg {
+      float: right;
+      width: 40%;
+      padding: 4% 3% 0 0;
+    }
+
+.stretchingheading {
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  clear: both;
+  padding: 27% 0 0 23%;
+  float: left;
+  display: inline-block;
+}
+
+.stretching {
+  text-align: center;
+  float: left;
+  margin: 0 auto;
+  position: absolute;
+  padding: 29% 50% 0 0;
+  font-size: 15px;
+  clear: both;
+}
+
+.stretchingjpg {
+  float: right;
+  width: 35%;
+  padding: 4% 3% 0 0;
+  clear: both;
+}
+
+.healthyheading {
+    margin: 0 auto;
+    position: absolute;
+    text-align: center;
+    float: right;
+    clear: both;
+    padding: 28% 0 0 42%;
+    display: inline-block;
+  }
+
+  .healthy {
+    text-align: center;
+    float: right;
+    margin: 0 auto;
+    clear: both;
+    position: absolute;
+    padding: 30% 2% 0 25%;
+    font-size: 15px;
+    display: inline-block;
+  }
+
+    .healthyjpg {
+      float: right;
+      width: 40%;
+      padding: 4% 3% 0 0;
+    }
+
+/* Contact us form */
+.contact-title {
+  margin-top: 30px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+form {
+  margin-top: 20px;
+  text-align:center;
+}
+
+.form-control {
+  width: 400px;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid gray;
+  text-align: center;
+}
+
+input {
+  height: 45px;
+}
+
+footer {
+  background: #ff80b3;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  margin-bottom: 0 auto;
+  text-align: center;
+  clear: both;
+  text-decoration: none;
+}
+
+.sfooter {
+  background: #ff80b3;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  margin-top: 30%;
+  margin-bottom: 0 auto;
+  text-align: center;
+  clear: both;
+  text-decoration: none;
+}
+
+form .submit {
+  background: #ff80b3;
+  border-color: transparent;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 20px;
+  letter-spacing: 2px;
+}
+
+form .submit:hover{
+  background-color: #ff70b3;
+  cursor: pointer;
+}
+
+.register {
+  float: right;
+  text-decoration: none;
+  padding-top: 30px;
+}

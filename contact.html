@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Website Layout</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+
+<!-- Header -->
+
+<header>
+  <div class="container">
+    <h1>LIFE</h1>
+
+
+<!-- Navigation Bar -->
+    <nav>
+      <ul>
+        <li><a href='index.html'>Home</a></li>
+        <li><a href='services.html'>Services</a></li>
+        <li><a href='#'>Contact</a></li>
+
+      </ul>
+    </nav>
+<!-- Div class for register hyperlink, Sign in link currently not not working, only intended for design -->
+    <div class=register>
+    Sign In | <a href='register.html'>Register</a>
+  </div>
+
+</header>
+
+<!-- Title of the contact form -->
+<div class="contact-title">
+    <h2>Please contact us if you have any enquiries</h2>
+</div>
+
+<!-- Contact form div class to enable CSS styling -->
+  <div class="contact-form">
+
+<!-- Form ID will be the same as the div class. Action is to mail to LIFE@council.com per assignment specifications using only HTML5 code and not JavaScript or PHP.-->
+    <form id="contact-form" method="post" action="mailto:LIFE@localcouncil.com">
+
+      <!-- Input name is the value assigned to the input, type is text, class is used for CSS styling, placeholder is the name of the textarea on the website.-->
+      <input name="name" type="text" class="form-control" placeholder="Your Name" required><br><br>
+
+      <input name="email" type="text" class="form-control" placeholder="Your Email" required><br><br>
+
+      <textarea name="enquiry" class="form-control" placeholder="Enquiry" rows="4" required></textarea><br>
+
+      <input type="submit" class="form-control submit" value="SEND ENQUIRY">
+    </form>
+
+  </div>
+
+<!-- Footer, COVID-19 Resources hyperlink is referenced here -->
+<footer class="sfooter">
+<a href="https://www.health.gov.au/resources/collections/novel-coronavirus-2019-ncov-resources">COVID-19 Resources</a>
+</footer>
+</body>
+</html>
