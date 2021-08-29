@@ -253,11 +253,20 @@ form .submit:hover{
   padding-top: 30px;
 }
 
+/* Registration Form CSS */
 .register-container {
   display: grid;
   padding: 10px;
   grid-gap: 10px;
-  grid-template-columns: 1fr 2fr;s
+  grid-template-columns: 1fr 3fr;s
+}
+
+.ageslider {
+  width: 100%;
+}
+
+.slider {
+  opacity: 0.7;
 }
 /*
 #email {
