@@ -31,8 +31,80 @@
   </div>
 </header>
 
+<!--Registration Form HTML and Javascript below -->
 <meta charset="utf-8">
 <title>Register Now</title>
+
+  <form action="" method="post" onsubmit="return validateForm();">
+    <fieldset>
+      <legend>Registration</legend>
+      <div class="register-container">
+        <div>
+          <label for="firstname">*First name</label>
+        </div>
+
+        <div>
+          <input type="text" id="firstname" name="firstname"></input>
+          <div class="error">Please enter your first name.</div>
+        </div>
+
+        <div>
+          <label for="lastname">Please enter your last name.</label>
+        </div>
+
+        <div>
+          <input type="text" id="lastname" name="lastname"></input>
+          <div class="error">Last name is required.</div>
+        </div>
+
+        <div>
+          <label for="email">*Email</label>
+        </div>
+        <div>
+          <input type="text" id="email" name="email"></input>
+          <div class="error">Please enter a valid email.</div>
+        </div>
+
+        <div>
+          <label for="phone">*Phone Number</label>
+        </div>
+        <div>
+          <input type="text" id="phone" name="phone"></input>
+          <div class="error" style="display: initial;">Number invalid. Please type in format: +61 4xx xxx xxx</div>
+        </div>
+
+        <div>
+          <label for="age">*Age</label>
+        </div>
+
+        <div class="ageslider">
+          <input type="range" min="1" max="100" value"20" class="slider" id="myRange"></input>
+          <div class="error">You must be 16 or over to register.</div>
+        </div>
+
+        <div>
+          <label for="studentstatus">*Are you currently a student?</label>
+        </div>
+        <div>
+          <input type="radio" id="studentstatus" value="yes" name="studentstatus" checked>Yes</input>
+          <input type="radio" id="studentstatus" value="no" name="studentstatus">No</input>
+          <div class="error">Please select Yes or No.</div>
+        </div>
+
+        <div>
+          <label for="empstatus">*Are you currently employed?</label>
+        </div>
+        <div>
+          <input type="radio" id="empstatus" value="yes" name="empstatus" checked>Yes</input>
+          <input type="radio" id="empstatus" value="no" name="empstatus">No</input>
+          <div class="error">Please select Yes or No.</div>
+        </div>
+          </div>
+    </fieldset>
+  </form>
+
+
+<!-- JavaScript -->
 
 <script>
   const registrationKey = 'registrationData';
@@ -42,15 +114,59 @@
     if(data == null)
       return;
 
-      // convert stored string into JSON object for easier processing
+      // convert data into JSON for easier processing
       data = JSON.parse(data);
 
       document.getElementById("firstname").value = data.firstname;
-      document.getElementById("secondname").value = data.secondname;
+      document.getElementById("lastname").value = data.lastname;
+      document.getElementById("email").value = data.email;
+      document.getElementById("phone").value = data.phone;
+      document.getElementById("age").value = data.age;
+      document.getElementById("studentstatus").value = data.studentstatus;
+      document.getElementById("empstatus").value = data.empstatus;
+
+      // Populate Member memberNames
+
+      validateForm();
+    }
+
+    function validateForm() {
+      var isValid = true;
+
+      const firstname = document.getElementById("firstname");
+      const lastname = document.getElementById("lastname");
+      const email = document.getElementById("email");
+      const phone = document.getElementById("phone");
+      const age = document.getElementById("age");
+      const studentstatus = document.getElementById("studentstatus");
+      const emptstatus = document.getElementById("empstatus");
+
+      firstname.nextElementSibling.style.display = null;
+      if(firstname.value.match(/^\s*$/)) {
+        isValid = false;
+        firstname.nextElementSibling.style.display = "initial";
+      }
+
+      function ValidateEmail(inputText)
+      {
+        var mailformat = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
+          if(inputText.value.match(mailformat))
+        {
+        document.form1.text1.focus();
+        return true;
+        }
+        else {
+          {alert("You have entered an invalid email address!");
+          document.form1.text1.focus();
+        return false;
+        }
+      }
+    }
 
 
 
-}
+
+
 
 <!-- Footer, COVID-19 Resources hyperlink is referenced here -->
 <footer class="footer">
