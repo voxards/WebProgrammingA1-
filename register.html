@@ -29,11 +29,31 @@
     <div class=register>
     Sign In | <a href=#>Register</a>
   </div>
-
 </header>
 
+<meta charset="utf-8">
+<title>Register Now</title>
+
+<script>
+  const registrationKey = 'registrationData';
+
+  function populateForm() {
+    var data = localStorage.getItem(registrationKey);
+    if(data == null)
+      return;
+
+      // convert stored string into JSON object for easier processing
+      data = JSON.parse(data);
+
+      document.getElementById("firstname").value = data.firstname;
+      document.getElementById("secondname").value = data.secondname;
+
+
+
+}
+
 <!-- Footer, COVID-19 Resources hyperlink is referenced here -->
-<footer class="sfooter">
+<footer class="footer">
 <a href="https://www.health.gov.au/resources/collections/novel-coronavirus-2019-ncov-resources">COVID-19 Resources</a>
 </footer>
 </body>
