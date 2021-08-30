@@ -207,7 +207,7 @@ form {
   text-align:center;
 }
 
-.form-control {
+.form-contact {
   width: 400px;
   background: transparent;
   border: none;
@@ -235,7 +235,7 @@ footer {
 
 form .submit {
   background: #ff80b3;
-  border-color: transparent;
+  border-color:  transparent;
   font-weight: bold;
   font-size: 18px;
   margin-top: 20px;
@@ -253,27 +253,70 @@ form .submit:hover{
   padding-top: 30px;
 }
 
-/* Registration Form CSS */
-.register-container {
-  display: grid;
-  padding: 10px;
-  grid-gap: 10px;
-  grid-template-columns: 1fr 3fr;s
+/* Registration form */
+
+legend {
+  font-size: 30px;
+  padding-bottom: 40px;
+}
+.registrationform {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 20vh;
+  margin: 0;
 }
 
-.ageslider {
+.form {
+  padding: 30px 40px;
+}
+.form-control {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.form-control label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.form-control input {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  display: block;
   width: 100%;
+  padding: 10px;
 }
 
-.slider {
-  opacity: 0.7;
-}
-/*
-#email {
-  width: 30ch;
+.form-control small {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
 }
 
-#firstName{
-  grid-column: 1 / 2 span 2;
+.form button {
+  background-color: #ff80b3;
+  border: 0;
+  border-radius: 4px;
+  width: 100%;
+  padding: 10px;
+}
 
+.form button:hover{
+  background-color: #ff70b3;
+}
+
+.form-control.success input {
+  border-color: #2ecc71;
+}
+
+.form-control.error input {
+  border-color: #e74c3c;
+}
+
+.form-control.error small {
+  color: #e74c3c;
+  visibility: visible;
 }
