@@ -110,8 +110,24 @@ function validateAge() {
     age = parseInt(age,10);
   }
 
-// Submit form
-document.querySelector("form.class-name").addEventListener("submit", function(event) {
-  event.preventDefault();
-  alert("I've been submitted.");
-}, false);
+// Membership Fee Calculator
+function membershipCalculator() {
+  var ans = document.getElementById("answer");
+  ans.value = calculatePrice();
+}
+
+function calculatePrice() {
+  let discount = 0;
+  const age = Number(document.getElementById('age').value);
+  if (age >= 16 && age <= 20) {
+    discount += 1;
+  }
+  if (document.getElementById('student').checked) {
+    discount += 0.5;
+  }
+  if (document.getElementById('unemployed').checked) {
+    discount += 4;
+  }
+
+  return 10 - discount;
+}
