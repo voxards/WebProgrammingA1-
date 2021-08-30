@@ -60,7 +60,7 @@
 
           <div class="form-control">
             <label>Phone</label>
-            <input type="text" placeholder="04xx xxx xxx " id="phone">
+            <input type="text" placeholder="0412 345 678" id="phone">
             <br>
             <small>Error Message</small>
           </div>
@@ -68,24 +68,27 @@
 
           <div class="form-control">
             <label>Age</label>
-            <input type="text" placeholder="florin" id="age">
+            <input type="range" min="1" max="100" value="20" class="slider" id="age">
+            <p> <span id="ageValue"></span></p>
             <small>Error Message</small>
           </div>
 
           <div class="form-control">
             <label>Are you currently a student?</label>
-            <input type="text" placeholder="florin" id="studentstatus">
+            <input type="radio" name="studentstatus" value="yes" id="studentstatus-yes">Yes
+            <br>
+            <input type="radio" name="studentstatus" value="no" id="studentstatus-no">No
             <small>Error Message</small>
           </div>
-
 
           <div class="form-control">
             <label>Are you currently employed?</label>
-            <input type="text" placeholder="florin" id="empstatus">
+            <input type="radio" name="employmentstatus" value="yes" id="empstatus-yes">Yes
+            <br>
+            <input type="radio" name="employmentstatus" value="no" id="empstatus-no">No
             <small>Error Message</small>
           </div>
-
-          <button>Submit</button>
+          <button type="submit">Submit</button>
 
 
 </form>
