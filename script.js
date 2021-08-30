@@ -4,8 +4,7 @@ const lastname = document.getElementById("lastname");
 const email = document.getElementById("email");
 const phone = document.getElementById("phone");
 const age = document.getElementById("age");
-const studentstatus = document.getElementById("studentstatus");
-const empstatus = document.getElementById("empstatus");
+
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -20,8 +19,7 @@ function validateForm() {
   const emailValue = email.value.trim();
   const phoneValue = phone.value.trim();
   const ageValue = age.value.trim();
-  const studentstatusValue = studentstatus.value.trim();
-  const empstatusValue = empstatus.value.trim();
+
 
   // First name condition
   if (firstnameValue === "") {
@@ -60,8 +58,12 @@ function validateForm() {
     success(phone);
   }
 
+  if (ageValue < 16) {
+    error(age, "*You must be aged 16 years or older to sign up");
+  } else {
+    success(age);
+  }
 }
-
 
 // Error function
 function error(input, message) {
@@ -88,3 +90,28 @@ function validateEmail(email) {
 
 // Validate phone
 var validatePhone = /^\({0,1}((0|\+61)(2|4|3|7|8)){0,1}\){0,1}(\ |-){0,1}[0-9]{2}(\ |-){0,1}[0-9]{2}(\ |-){0,1}[0-9]{1}(\ |-){0,1}[0-9]{3}$/;
+
+// Show Age value on slider
+var slider = document.getElementById("age");
+var output = document.getElementById("ageValue");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+
+// Validate age, must be over 16
+function validateAge() {
+  var age = document.getElementById("age").value;
+  if (age === "") {
+    return true;
+  }
+  // converting the age to a number
+    age = parseInt(age,10);
+  }
+
+// Submit form
+document.querySelector("form.class-name").addEventListener("submit", function(event) {
+  event.preventDefault();
+  alert("I've been submitted.");
+}, false);
