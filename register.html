@@ -73,21 +73,42 @@
             <small>Error Message</small>
           </div>
 
+        <!-- Student Status -->
           <div class="form-control">
             <label>Are you currently a student?</label>
-            <input type="radio" name="studentstatus" value="yes" id="studentstatus-yes">Yes
+            <input type="radio" name="studentstatus" id="student" value="yes">Yes
             <br>
-            <input type="radio" name="studentstatus" value="no" id="studentstatus-no">No
+            <input type="radio" name="studentstatus" id="notstudent" value="no">No
+            <small>Error Message</small>
+          </div>
+
+<!-- Employment Status -->
+          <div class="form-control">
+            <label>Are you currently employed?</label>
+            <input type="radio" name="empstatus" id="employed" value="yes">Yes
+            <input type="radio" name="empstatus" id="unemployed" value="no">No
             <small>Error Message</small>
           </div>
 
           <div class="form-control">
-            <label>Are you currently employed?</label>
-            <input type="radio" name="employmentstatus" value="yes" id="empstatus-yes">Yes
-            <br>
-            <input type="radio" name="employmentstatus" value="no" id="empstatus-no">No
-            <small>Error Message</small>
+            <label>Membership Fee
+            <br>The following apply in applicable scenarios;
+          <li>$10 per month standard rate</li>
+          <li>If you are aged between 16-20 years, you get a 10% discount</li>
+          <li>If you are a student, you get a 5% discount</li>
+          <li>If you are unemployed, you get a 40% discount</li><br>
+          <li>All discounts are cumulative, meaning each are added ontop of each other if you qualify for multiple</li>
+          </label>
+          <br><br>
+          Total Fee ($):
+          <input type="text" id="answer" readonly>
+          <input type="button" onClick="membershipCalculator();" value="Calculate">
           </div>
+
+
+
+
+
           <button type="submit">Submit</button>
 
 
