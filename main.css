@@ -204,7 +204,7 @@ nav li {
 
 form {
   margin-top: 20px;
-  text-align:center;
+  text-align: center;
 }
 
 .form-contact {
@@ -339,3 +339,5 @@ legend {
   cursor: pointer;
   box-shadow: -100px 0 0 100px #43e5f7;
 }
+
+/* Membership Fee css */
