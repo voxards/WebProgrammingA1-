@@ -111,23 +111,67 @@ function validateAge() {
   }
 
 // Membership Fee Calculator
+
+// Defining the function
 function membershipCalculator() {
+// Declaring 'ans' to variable element in the form with the ID 'answer'
   var ans = document.getElementById("answer");
+  // Call another function that calculates the answer
   ans.value = calculatePrice();
 }
 
+// Calculate price function called earlier
 function calculatePrice() {
+// Let the discount be 0 at first
   let discount = 0;
+
+  // Calling constant age from the html
   const age = Number(document.getElementById('age').value);
+  // Age condition, if age is over 16 and under 20 apply 10% discount
   if (age >= 16 && age <= 20) {
     discount += 1;
   }
+  // Student discount, if user is student apply 5% discount
   if (document.getElementById('student').checked) {
     discount += 0.5;
   }
+  // Unemployed discount, if user is unemployed apply 40% discount
   if (document.getElementById('unemployed').checked) {
     discount += 4;
   }
 
+  // Return the standard vrate of $10 per month - the discount price calculated through the conditions
+
   return 10 - discount;
 }
+
+
+// Diet Calculator
+
+// There will be 6 functions.
+// Anything, Keto, Vegetarian, Calories, Number of meals, Generate
+
+const dietForm = document.getElementById("dietForm");
+const anything = document.getElementById("anything");
+const keto = document.getElementById("keto");
+const vegetarian = document.getElementById("vegetarian");
+
+
+
+
+
+ //Generate result based on radio inputs
+// function generateMeal() {
+// var result = document.getElementById("result");
+//result.value = mealPlanner();
+
+//}
+//function mealPlanner() {
+//let meal = 0
+
+//if (document.getElementById("anything").checked) {
+//	meal += 5;
+//}
+
+//return 1 - meal;
+//}
