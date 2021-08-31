@@ -34,7 +34,7 @@
 </header>
 <!-- Meal Planner -->
 
-<div class="mealPlanner">
+<div class="dietSelector">
 
 
 <div class="dietContainer">
@@ -43,31 +43,42 @@
   </div>
 
 <li class=nav-item>
-<a class="navlink" href="#" on-click="MyFunction();returnfalse;" data-value="Anything">Anything</a>
+<input type="radio" name="diets" id="anything">Anything
 <img src="images/meat.png" class="diets">
 </li>
 
 <li class=nav-item>
-<a class="navlink" href="#" on-click="MyFunction();returnfalse;" data-value="Keto">Keto</a>
+<input type="radio" name="diets" id="keto">Keto
 <img src="images/keto.png" class="diets">
 </li>
 
 <li class=nav-item>
-<a class="navlink" href="#" on-click="MyFunction();returnfalse;" data-value="Vegetarian">Vegetarian</a>
+<input type="radio" name="diets" id="vegetarian">Vegetarian
 <img src="images/vegetarian.png" class="diets">
-
 </li>
 
-<li class=nav-item>
-<a class="navlink" href="#" on-click="MyFunction();returnfalse;" data-value="Vegan">Vegan</a>
-<img src="images/vegan.png" class="diets">
-</li>
+<form class="diet" id="dietForm">
+<label>Please enter the number of calories you wish to eat in a day:
+</label>
+<input type="number" placeholder="1800" id="calories" min="500" max="5000">
+<br><br>
+<label>
+How many meals you would like to eat:
+</label>
+<input type="number" placeholder="4" id="meals" min="1" max="5">
 
-
-
-
+<input type="button" onClick="generateMeal();" value="Generate">
+<br><br>
+<input type="text" id="result">
+</form>
 </div>
 </div>
+
+<div class="mealPlan">
+Hello this is the meal plan
+</div>
+
+
 
 
 <!-- Footer, COVID-19 Resources hyperlink is referenced here -->
