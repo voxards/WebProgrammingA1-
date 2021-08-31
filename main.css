@@ -35,7 +35,7 @@ h1 {
 nav ul {
   margin: 0;
   padding: 0;
-  list-style:none;
+  list-style: none;
 }
 
 nav li {
@@ -308,6 +308,7 @@ legend {
   background-color: #ff70b3;
 }
 
+
 .form-control.success input {
   border-color: #2ecc71;
 }
@@ -340,4 +341,55 @@ legend {
   box-shadow: -100px 0 0 100px #43e5f7;
 }
 
-/* Membership Fee css */
+/* Meal Planner CSS */
+
+.mealPlanner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  min-height: 20vh;
+  text-align: center;
+}
+
+a.mealplanner {
+    display: block;
+    padding-top: 45%;
+    text-decoration: none;
+    text-align: center;
+    padding-left: 50%;
+    font-size: 30px;
+
+}
+
+.dietContainer {
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  width: 600px;
+  max-width: 100%;
+  padding: 30px 40px;
+}
+
+.header {
+  padding: 20px 40px;
+}
+
+.header h2 {
+  margin: 0;
+}
+
+li.nav-item {
+  margin: 0;
+  padding: 40px;
+  list-style: none;
+  display: inline-block;
+  padding-top: 30px;
+  font-size: 15px;
+}
+
+img.diets {
+  width: 100px;
+  height: 80px;
+  display: block;
+}
