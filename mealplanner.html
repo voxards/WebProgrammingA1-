@@ -35,92 +35,105 @@
 <!-- Meal Planner -->
 
 <div class="dietSelector">
-
-
-<div class="dietContainer">
-  <div class="header">
+  <div class="dietContainer">
+    <div class="header">
       <h2>Please choose your diet</h2>
+    </div>
+
+    <li class="nav-item">
+      <input
+        type="radio"
+        name="diets"
+        id="anything"
+        required
+      />Anything
+      <img src="images/meat.png" class="diets" />
+    </li>
+
+    <li class="nav-item">
+      <input type="radio" name="diets" id="vegan" required/>Vegan
+      <img src="images/keto.png" class="diets" />
+    </li>
+
+    <li class="nav-item">
+      <input type="radio" name="diets" id="vegetarian" required/>Vegetarian
+      <img src="images/vegetarian.png" class="diets" />
+    </li>
+
+    <form class="diet" onsubmit="generateMeal(event)" id="dietForm">
+      <label
+        >Please enter the number of calories you wish to eat in a day:
+      </label>
+      <input
+        type="number"
+        placeholder="1800"
+        id="calories"
+        min="1500"
+        max="2500"
+        required
+      />
+      <br /><br />
+      <label> How many meals you would like to eat: </label>
+      <input type="number" placeholder="4" id="meals" min="3" max="4" required />
+
+      <button type="submit" value="Generate">Generate</button>
+    </form>
   </div>
-
-<li class=nav-item>
-<input type="radio" onclick="generate()" name="diets" id="anything">Anything
-<img src="images/meat.png" class="diets">
-</li>
-
-<li class=nav-item>
-<input type="radio" name="diets" id="keto">Keto
-<img src="images/keto.png" class="diets">
-</li>
-
-<li class=nav-item>
-<input type="radio" name="diets" id="vegetarian">Vegetarian
-<img src="images/vegetarian.png" class="diets">
-</li>
-
-<form class="diet" id="dietForm">
-<label>Please enter the number of calories you wish to eat in a day:
-</label>
-<input type="number" placeholder="1800" id="calories" min="1000" max="2500">
-<br><br>
-<label>
-How many meals you would like to eat:
-</label>
-<input type="number" placeholder="4" id="meals" min="3" max="4">
-
-<button onClick="generate" value="Generate">Generate</button>
-<br><br>
-</form>
 </div>
-</div>
-
-<!-- 9 containers for each type of diet.
-Anything - 1000-1500 Calories - 1501-2000 Calories - 2001-2500 Calories
-            3-4-5 meals a day    3-4-5 Meals a day       3-4-5 meals a day
-Keto
--->
 
 <!-- Meal Plan Container -->
 <div id="mealPlan" class="mealPlan">
 
-<!-- 3 Meals div container for Anything Plan 1500-2500 Calories-->
-<div id="anythingPlan3">
-<h2>Your delicious, personalised 3-meal plan of 'Anything' in a 1500-2000 calorie range:</h2>
+<!-- Div container for Anything Plan, 3 meals. 1500-2000 Calories-->
+<div id="anythingPlan3" style="display: none;">
+  <h2>
+    Your delicious, personalised 3-meal plan of 'Anything' in a 1500-2000
+    calorie range:
+  </h2>
   <h3 class="headings">Breakfast</h3>
-    <img src="images/oatmeal.jpg" class="mealImage">
+  <img src="images/oatmeal.jpg" class="mealImage" />
   <span class="calories"> 628 Calories </span>
-    <br>
-    <a class="recipes"
-    href="https://www.runningtothekitchen.com/strawberry-oatmeal/">
-    Strawberry Oatmeal</a>
-    <br>
-    <span class="serving">2 Bowls</span>
+  <br />
+  <a
+    class="recipes"
+    href="https://www.runningtothekitchen.com/strawberry-oatmeal/"
+  >
+    Strawberry Oatmeal</a
+  >
+  <br />
+  <span class="serving">2 Bowls</span>
 
   <h3 class="headings">Lunch</h3>
-  <img src="images/drumsticks.jpg" class="mealImage">
+  <img src="images/drumsticks.jpg" class="mealImage" />
   <span class="calories"> 504 Calories </span>
-    <br>
-    <a class="recipes"
-    href="https://www.taste.com.au/recipes/smoky-bbq-drumsticks-carrot-noodle-salad/RUmTZzJv?r=healthy/qnLBa1zE">
-    Smokey Bbq Drumsticks and Carrot Noodle Salad</a>
-    <br>
-    <span class="serving">1 serving</span>
+  <br />
+  <a
+    class="recipes"
+    href="https://www.taste.com.au/recipes/smoky-bbq-drumsticks-carrot-noodle-salad/RUmTZzJv?r=healthy/qnLBa1zE"
+  >
+    Smokey Bbq Drumsticks and Carrot Noodle Salad</a
+  >
+  <br />
+  <span class="serving">1 serving</span>
 
   <h3 class="headings">Dinner</h3>
-  <img src="images/meatballs.jpg" class="mealImage">
+  <img src="images/meatballs.jpg" class="mealImage" />
   <span class="calories"> 628 Calories</span>
-  <br>
-  <a class="recipes"
-  href="https://www.bbcgoodfood.com/recipes/chicken-meatballs-quinoa-curried-cauliflower">
-  Chicken Meatballs with Quinoa & Curried cauliflower></a>
-    <br>
-    <span class="serving">1 serving</span>
-
+  <br />
+  <a
+    class="recipes"
+    href="https://www.bbcgoodfood.com/recipes/chicken-meatballs-quinoa-curried-cauliflower"
+  >
+    Chicken Meatballs with Quinoa & Curried cauliflower></a
+  >
+  <br />
+  <span class="serving">1 serving</span>
 </div>
 
-<!-- 4 meal plan with the 1500-2000 Calorie range-->
-<div id="anythingPlan4">
-  <br><br><br>
-  <h2>Your delicious, personalised 4-meal plan of 'Anything' in a 1500-2000 calorie range:</h2>
+<!-- Anthing Plan container with 4 meals, within the 1500-2500 calorie range -->
+<div id="anythingPlan4" style= "display: none;">
+
+  <h2>Your delicious, personalised 4-meal plan of 'Anything' in a 1500-2500 calorie range:</h2>
 
       <h3 class="headings">Breakfast</h3>
         <img src="images/oatmeal.jpg" class="mealImage">
@@ -142,7 +155,7 @@ Keto
         <br>
         <span class="serving">1 serving</span>
 
-        <h3 class="headings">Afternoon Tea</h3>
+        <h3 class="headings">Afternoon Snack</h3>
         <img src="images/apple.jpg" class="mealImage">
         <span class="calories"> 183 Calories</span>
         <br>
@@ -159,14 +172,173 @@ Keto
       Chicken Meatballs with Quinoa & Curried cauliflower></a>
         <br>
         <span class="serving">1 serving</span>
+</div>
+
+<!-- Vegan diet plan with 3 meals, 1500-2000 calorie range -->
+<div id="veganPlan3" style= "display: none;">
+
+  <h2>Your delicious, personalised 3-meal plan of 'Vegan' in a 1500-2000 calorie range:</h2>
+
+      <h3 class="headings">Breakfast</h3>
+        <img src="images/oatmeal.jpg" class="mealImage">
+      <span class="calories"> 585 Calories </span>
+        <br>
+        <a class="recipes"
+        href="https://www.eatthismuch.com/recipe/nutrition/banana-nut-oatmeal,944791/">
+        Banana Nut Oatmeal</a>
+        <br>
+        <span class="serving">2 serving</span>
+
+      <h3 class="headings">Lunch</h3>
+      <img src="images/salad.jfif" class="mealImage">
+      <span class="calories"> 400 Calories </span>
+        <br>
+        <a class="recipes"
+        href="https://www.eatingwell.com/recipe/259814/green-salad-with-edamame-beets/">
+        Green Salad with Edamame & Beets</a>
+        <br>
+        <span class="serving">1 serving</span>
+
+      <h3 class="headings">Dinner</h3>
+      <img src="images/potatoes.jfif" class="mealImage">
+      <span class="calories"> 500 Calories</span>
+      <br>
+      <a class="recipes"
+      href="https://www.eatingwell.com/recipe/260717/stuffed-sweet-potato-with-hummus-dressing/">
+      Stuffed Sweet Potato with Hummus Dressing</a>
+        <br>
+        <span class="serving">1 serving</span>
+</div>
+
+<!-- Vegan diet plan with 4 meals, 1500-2500 calorie range -->
+<div id="veganPlan4" style= "display: none;">
+  <h2>Your delicious, personalised 4-meal plan of 'Vegan' in a 1500-2500 calorie range:</h2>
+
+      <h3 class="headings">Breakfast</h3>
+        <img src="images/chocolate.jfif" class="mealImage">
+      <span class="calories"> 489 Calories </span>
+        <br>
+        <a class="recipes"
+        href="https://www.eatthismuch.com/recipe/nutrition/chocolate-peanut-protein-shake,254482/">
+        Chocolate Peanut Protein Shake</a>
+        <br>
+        <span class="serving">1 shake</span>
+
+      <h3 class="headings">Lunch</h3>
+      <img src="images/sandwich.jpg" class="mealImage">
+      <span class="calories"> 615 Calories </span>
+        <br>
+        <a class="recipes"
+        href="https://www.eatthismuch.com/recipe/nutrition/big-pbj-sandwich,33482/">
+        Big Peanut Butter & Jelly Sandwich</a>
+        <br>
+        <span class="serving">1 sandwich</span>
+
+        <h3 class="headings">Dinner</h3>
+        <img src="images/pasta.jpg" class="mealImage">
+        <span class="calories"> 720 Calories</span>
+        <br>
+        <a class="recipes"
+        href="https://www.eatthismuch.com/recipe/nutrition/pasta-la-checca,45109/">
+        RecipeName</a>
+          <br>
+          <span class="serving">2 servings</span>
+
+        <h3 class="headings">Snack</h3>
+        <img src="images/tomato.jfif" class="mealImage">
+        <span class="calories"> 213 Calories</span>  <br>
+        <a class="recipes"
+        href="https://www.eatthismuch.com/recipe/nutrition/tomato-and-hummus-on-rye,905651/">
+        Tomato and Hummus on Rye</a>
+          <br>
+          <span class="serving">1 sandwich</span>
 
 
 </div>
 
 
+<!-- Vegetarian plan, with 3 meals, 1500-2000 calorie range -->
+<div id="vegetarianPlan3" style= "display: none;">
+
+  <h2>Your delicious, personalised 3-meal plan of 'Vegetarian' in a 1500-2000 calorie range:</h2>
+
+      <h3 class="headings">Breakfast</h3>
+        <img src="images/egg.jpg" class="mealImage">
+      <span class="calories"> 523 Calories </span>
+        <br>
+        <a class="recipes"
+        href="https://www.eatthismuch.com/recipe/nutrition/egg-and-cheese-breakfast-sandwich,717847/">
+        Egg and Cheese Breakfast Sandwich</a>
+        <br>
+        <span class="serving">2 sandwiches</span>
+
+        <h3 class="headings">Lunch</h3>
+        <img src="images/avacadosand.jpg" class="mealImage">
+        <span class="calories"> 522 Calories </span>
+          <br>
+          <a class="recipes"
+          href="https://www.eatthismuch.com/recipe/nutrition/alt-avocado-lettuce-and-tomato-sandwiches,386790/">
+          Avocado, Lettuce, and Tomato sandwciches</a>
+          <br>
+          <span class="serving">2 sandwiches</span>
+
+      <h3 class="headings">Dinner</h3>
+      <img src="images/redpasta.jpg" class="mealImage">
+      <span class="calories"> 617 Calories</span>
+      <br>
+      <a class="recipes"
+      href="https://www.eatthismuch.com/recipe/nutrition/pasta-with-red-sauce-and-mozzarella,907167/">
+      Pasta with Red sauce and Mozzarella</a>
+        <br>
+        <span class="serving">2 servings</span>
 </div>
 
+<!-- Vegetarian diet plan with 4 meals, 1500-2500 calorie range -->
+<div id="vegetarianPlan4" style= "display: none;">
+  <h2>Your delicious, personalised 4-meal plan of 'Vegetarian' in a 1500-2500 calorie range:</h2>
 
+      <h3 class="headings">Breakfast</h3>
+        <img src="images/yogurt.jfif" class="mealImage">
+      <span class="calories"> 503 Calories </span>
+        <br>
+        <a class="recipes"
+        href="https://www.eatthismuch.com/recipe/nutrition/protein-yogurt-and-blueberries,946462/">
+        Protein Yogurt and Blueberries</a>
+        <br>
+        <span class="serving">1 serving</span>
+
+      <h3 class="headings">Lunch</h3>
+      <img src="images/hummus.jpg" class="mealImage">
+      <span class="calories"> 466 Calories </span>
+        <br>
+        <a class="recipes"
+        href="https://www.eatthismuch.com/recipe/nutrition/veggie-and-hummus-sandwich,906659/">
+        Veggie and Hummus sandwich</a>
+        <br>
+        <span class="serving">2 sandwiches</span>
+
+      <h3 class="headings">Dinner</h3>
+      <img src="images/grilled.jfif" class="mealImage">
+      <span class="calories"> 633 Calories</span>
+      <br>
+      <a class="recipes"
+      href="https://www.eatthismuch.com/recipe/nutrition/grilled-cheese-with-tomato-peppers-and-basil,45538/">
+      Grilled Cheese with Tomato, Peppers and Basil</a>
+        <br>
+        <span class="serving">2 serving</span>
+
+        <h3 class="headings">Snack</h3>
+        <img src="images/banana.jpg" class="mealImage">
+        <span class="calories"> 239 Calories</span>
+        <br>
+        <a class="recipes"
+        href="https://www.eatthismuch.com/recipe/nutrition/yogurt-banana,334433/">
+        Yogurt & Banana</a>
+          <br>
+          <span class="serving">1 serving</span>
+</div>
+
+</div>
 
 <!-- Footer, COVID-19 Resources hyperlink is referenced here -->
 <footer class="footer">
