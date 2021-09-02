@@ -160,14 +160,12 @@ function generateMeal(event) {
     const veganPlan4 = document.getElementById("veganPlan4");
     const vegetarianPlan3 = document.getElementById("vegetarianPlan3");
     const vegetarianPlan4 = document.getElementById("vegetarianPlan4");
-    const noCurrentPlan = document.getElementById("noCurrentPlan");
     anythingPlan3.style.display = "none";
     anythingPlan4.style.display = "none";
     veganPlan3.style.display = "none";
     veganPlan4.style.display = "none";
     vegetarianPlan3.style.display = "none";
     vegetarianPlan4.style.display = "none";
-    noCurrentPlan.style.display = "none";
 
 
 // Anything diet plan with 3 meals, 1500-2000 calories
@@ -229,9 +227,5 @@ function generateMeal(event) {
     meals == 4
   ) {
     vegetarianPlan4.style.display = "block";
-  }
-
-  else {
-    noCurrentPlan.style.display = "block";
   }
 }
