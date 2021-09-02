@@ -147,3 +147,85 @@ function calculatePrice() {
 
 
 // Diet Calculator
+
+// Generate meal function
+function generateMeal(event) {
+    event.preventDefault();
+    debugger;
+    const calories = Number(document.getElementById("calories").value);
+    const meals = Number(document.getElementById("meals").value);
+    const anythingPlan3 = document.getElementById("anythingPlan3");
+    const anythingPlan4 = document.getElementById("anythingPlan4");
+    const veganPlan3 = document.getElementById("veganPlan3");
+    const veganPlan4 = document.getElementById("veganPlan4");
+    const vegetarianPlan3 = document.getElementById("vegetarianPlan3");
+    const vegetarianPlan4 = document.getElementById("vegetarianPlan4");
+    anythingPlan3.style.display = "none";
+    anythingPlan4.style.display = "none";
+    veganPlan3.style.display = "none";
+    veganPlan4.style.display = "none";
+    vegetarianPlan3.style.display = "none";
+    vegetarianPlan4.style.display = "none";
+
+
+// Anything diet plan with 3 meals, 1500-2000 calories
+    if (
+      document.getElementById("anything").checked &&
+      calories >= 1500 &&
+      calories <= 2000 &&
+      meals == 3
+    ) {
+      anythingPlan3.style.display = "block";
+    }
+
+// Anything diet plan with 4 meals, 1500-2500 calories
+    if (
+      document.getElementById("anything").checked &&
+      calories >= 1500 &&
+      calories <= 2500 &&
+      meals == 4
+    ) {
+      anythingPlan4.style.display = "block";
+    }
+
+// Vegan diet plan with 3 meals, 1500-2000 calories
+    if (
+      document.getElementById("vegan").checked &&
+      calories >= 1500 &&
+      calories <= 2000 &&
+      meals == 3
+    ) {
+      veganPlan3.style.display = "block";
+    }
+
+// Vegan diet plan with 4 meals, 1500-2500 calories
+    if (
+      document.getElementById("vegan").checked &&
+      calories >= 1500 &&
+      calories <= 2500 &&
+      meals == 4
+    ) {
+      veganPlan4.style.display = "block";
+    }
+
+// Vegetarian diet plan with 3 meals, 1500-2000 calories
+  if (
+    document.getElementById("vegetarian").checked &&
+    calories >= 1500 &&
+    calories <= 2000 &&
+    meals == 3
+  ) {
+    vegetarianPlan3.style.display = "block";
+  }
+
+
+// Vegetarian diet plan with 3 meals, 1500-2000 calories
+  if (
+    document.getElementById("vegetarian").checked &&
+    calories >= 1500 &&
+    calories <= 2500 &&
+    meals == 4
+  ) {
+    vegetarianPlan4.style.display = "block";
+  }
+}
