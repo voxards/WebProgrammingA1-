@@ -60,12 +60,12 @@
 <form class="diet" id="dietForm">
 <label>Please enter the number of calories you wish to eat in a day:
 </label>
-<input type="number" placeholder="1800" id="calories" min="500" max="5000">
+<input type="number" placeholder="1800" id="calories" min="1000" max="2500">
 <br><br>
 <label>
 How many meals you would like to eat:
 </label>
-<input type="number" placeholder="4" id="meals" min="1" max="5">
+<input type="number" placeholder="4" id="meals" min="3" max="5">
 
 <input type="button" onClick="generateMeal();" value="Generate">
 <br><br>
@@ -74,10 +74,50 @@ How many meals you would like to eat:
 </div>
 </div>
 
+<!-- 9 containers for each type of diet.
+Anything - 1000-1500 Calories - 1501-2000 Calories - 2001-2500 Calories
+            3-4-5 meals a day    3-4-5 Meals a day       3-4-5 meals a day
+Keto
+-->
+
+<!-- Meal Plan Container -->
 <div class="mealPlan">
-Hello this is the meal plan
+
+<!-- 3 Meals div container for Anything Plan 1500-2500 Calories-->
+<div class="anythingPlan3">
+<h2>Your delicious, personalised 3-meal plan of 'Anything' in a 1500-2000 calorie range:<h2>
+  <h3>Breakfast</h3>
+  <span class="calories"> 628 Calories </span>
+  <img src="images/oatmeal.jpg" class="mealImage">
+    <br>
+    <a class="recipelinks"
+    href="https://www.runningtothekitchen.com/strawberry-oatmeal/">
+    Strawberry Oatmeal</a>
+
+    <br><span class="serving">2 Bowls</span>
+
+  <h3 class="headings">Lunch</h3>
+  <span class="calories"> 504 Calories </span>
+  <img src="images/drumstucks.jpg" class="mealImage">
+    <br>
+    <a class="recipelinks"
+    href="https://www.taste.com.au/recipes/smoky-bbq-drumsticks-carrot-noodle-salad/RUmTZzJv?r=healthy/qnLBa1zE">
+    Smokey Bbq Drumsticks and Carrot Noodle Salad</a>
+    <br>
+    <span class="serving">1 serving</span>
+
+  <h3 class="headings">Dinner</h3>
+  <span class="calories"> 628 Calories </span>
+  <img src="images/drumstuck.jpg" class="mealImage">
+    <br>Strawberry Oatmeal
+    <br><span class="serving" >2 Bowls</span>
+
 </div>
 
+
+
+
+</div>
 
 
 
