@@ -418,6 +418,7 @@ img.diets {
   align-items: center;
   margin:0 auto;
   margin-top: 3%;
+  padding-bottom: 10%;
 }
 
 .calories {
@@ -448,5 +449,4 @@ img.diets {
 }
 
 .mealPlan {
-  visbi
 }
