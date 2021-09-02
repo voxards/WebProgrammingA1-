@@ -147,31 +147,3 @@ function calculatePrice() {
 
 
 // Diet Calculator
-
-// There will be 6 functions.
-// Anything, Keto, Vegetarian, Calories, Number of meals, Generate
-
-const dietForm = document.getElementById("dietForm");
-const anything = document.getElementById("anything");
-const keto = document.getElementById("keto");
-const vegetarian = document.getElementById("vegetarian");
-
-
-
-
-
- //Generate result based on radio inputs
-// function generateMeal() {
-// var result = document.getElementById("result");
-//result.value = mealPlanner();
-
-//}
-//function mealPlanner() {
-//let meal = 0
-
-//if (document.getElementById("anything").checked) {
-//	meal += 5;
-//}
-
-//return 1 - meal;
-//}
